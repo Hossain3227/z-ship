@@ -10,6 +10,10 @@ import SendParcel from "../pages/Home/SendParcel/SendParcel";
 import DashboardLayout from "../Layout/DashboardLayout";
 import Myparcels from "../pages/Home/DashBoard/MyParcels/Myparcels";
 import Payment from "../pages/Home/DashBoard/Payment/Payment";
+import PaymentSuccess from "../pages/Home/DashBoard/Payment/PaymentSuccess";
+import PaymentCancelled from "../pages/Home/DashBoard/Payment/PaymentCancelled";
+import PaymentHistory from "../pages/Home/DashBoard/PaymentHistory/PaymentHistory";
+import TrackParcel from "../pages/Home/DashBoard/TrackParcel/TrackParcel";
 
 
 export  const router = createBrowserRouter([
@@ -58,9 +62,25 @@ export  const router = createBrowserRouter([
               Component: Myparcels
             },
             {
-              path: 'payment/:id',
+              path: 'payment/:parcelId',
               Component: Payment
-            }
+            },
+                {
+                  path: 'payment-success',
+                  Component: PaymentSuccess
+                }, 
+              {
+                path: 'payment-cancelled', 
+                Component: PaymentCancelled
+              },
+              {
+                path: 'paymentHistory',
+                Component: PaymentHistory
+              },
+              {
+                path:'track',
+                Component: TrackParcel
+              }
           ]
   }
 ]);
