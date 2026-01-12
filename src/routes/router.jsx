@@ -14,6 +14,7 @@ import PaymentSuccess from "../pages/Home/DashBoard/Payment/PaymentSuccess";
 import PaymentCancelled from "../pages/Home/DashBoard/Payment/PaymentCancelled";
 import PaymentHistory from "../pages/Home/DashBoard/PaymentHistory/PaymentHistory";
 import TrackParcel from "../pages/Home/DashBoard/TrackParcel/TrackParcel";
+import BeArider from "../pages/Home/DashBoard/BeARider/BeArider";
 
 
 export  const router = createBrowserRouter([
@@ -29,6 +30,10 @@ export  const router = createBrowserRouter([
           path: 'coverage',
           loader: () => fetch('./services.json'),
           Component: Coverage
+        },
+        {
+          path: 'beARider',
+          element:<PrivateRoute><BeArider></BeArider></PrivateRoute>
         },
         {
           path:'sendParcel',
